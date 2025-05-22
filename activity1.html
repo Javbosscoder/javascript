@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First JS project</title>
+    <script>
+        //your JS goes here!
+        alert('jaivir is sigma')
+        document.write('i enjoy playing soccer')
+        console.log('console.log thing')
+        function changeText() {
+            document.getElementById('myParagraph').innerHTML = "good boy!";
+        }
+        function change() {
+            document.getElementById("paragraph2").innerText = "good boy!";
+        }
+        
+    </script>
+</head>
+<body>
+
+    <p id="myParagraph">this text will chane when you click the button</p>
+    <button onclick="changeText()">im sigma!</button>
+    <p id="paragraph2">this text will change when you click the button</p>
+    <button onclick="change()">i am alpha!</button>
+    
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+    <button onclick="document.getElementById('myImage').src='https://media.tenor.com/o-JrpXsgTX0AAAAM/dark-yellow-dot.gif'" width="100px" height="100px">Turn off the light</button>
+    <img id="myImage" src="pic_bulboff.gif" style="width:101px">
+    <button onclick="document.getElementById('myImage').src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ8AAAC6CAMAAACHgTh+AAAAA1BMVEX/6QCWXkGSAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8A8WgAAGQfErhAAAAAElFTkSuQmCC'" width="100px" height="100px">Turn on the light</button>
+    <h1>JavaScript is cool</h1>
+    <p>open you console to see more...</p>
+</body>
+</html>
