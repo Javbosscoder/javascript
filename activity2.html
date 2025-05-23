@@ -16,115 +16,37 @@ h1 {
     background: #333;
 }
 
-    .Messi-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-    flex-wrap: wrap;
-}
 
-.Messi-item {
-    flex: 1 1 45%;
-    text-align: center;
-}
-
-.Messi-item img {
-    width: 450px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    margin-bottom: 10px;
-    height: 550px;
-    object-fit: cover;
-}
-
-.Messi-item h3 {
-    margin: 10px 0 5px;
-}
-
-.Messi-item p {
-    font-size: 0.95rem;
-    color: #333;
-}
     </style>
     <script>
-        //https://www.youtube.com/watch?v=EhS-MJ5EFxc&list=PLNDGBPMUufYyjw2J39XNNZfHAAfQT8yV6&index=8
-    function submitVote() {
-        var email = document.getElementById("email").value;
-        var vote = document.getElementById("vote").value;
-
-        // Check if the email has voted
-        if (localStorage.getItem(email)) {
-        alert("This email has already voted.");
-        } else {
-            // Store the vote
-            localStorage.setItem(email, vote);
-            alert("Your vote has been submitted successfully.");
-            updateResults();
-        }
+        function changepic() {
+        document.getElementById("MessiPic").src =
+        "https://assets.goal.com/images/v3/bltd58c4d60ecd9275e/GOAL_-_Blank_WEB_-_Facebook_-_2023-06-13T135350.847.png?auto=webp&format=pjpg&width=3840&quality=60";
+        console.log("Messi is the goat");
     }
 
-    function updateResults() {
-        var counts = { Option1: 0, Option2: 0, Option3: 0 };
+// https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_settimeout
+//const is a variable that cnat be reassigned once it is set
+const myTimeout = setTimeout(myGreeting, 5000);
 
-        // Count the votes
-        for (var i = 0; i < localStorage.length; i++) {
-        var key = localStorage.key(i);
-        var vote = localStorage.getItem(key);
-        if (counts[vote] !== undefined) {
-            counts[vote]++;
-        }
-    }
+function myGreeting() {
+    document.getElementById("demo").innerHTML = "Messi is better then ronaldo"
 
-        // Update the display
-        document.getElementById("option1Count").innerText = counts["Option1"];
-        document.getElementById("option2Count").innerText = counts["Option2"];
-        document.getElementById("option3Count").innerText = counts["Option3"];
-    }
+    let name = prompt("What is your favorite soccer player?");
 
-        // Update the results when the page loads
-    updateResults();
+}
 </script>
 </head>
 <body>
-    <h1>Messi VS Ronaldo</h1>
-    <div class="Messi-grid">
-    <div class="Messi-item">
-    <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iyRX9XkxC5So/v1/-1x-1.webp" width="250px" height="auto" alt="">
-    
+    <h1>Messi</h1>
+
+    <img
+    id="MessiPic"
+    src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iyRX9XkxC5So/v1/-1x-1.webp"
+    width="300px" />
     <h3>Messi</h3>
-    <p>Lionel Messi is the GOAT because of his unmatched playmaking, dribbling, and ability to control the entire game. Unlike Ronaldo, who thrives on finishing, Messi creates chances, assists, and scores with equal brilliance. His World Cup win with Argentina in 2022 gave him the ultimate achievement Ronaldo has yet to earn. Messi has more Ballon d'Or awards, showing consistent recognition as the best player in the world. Overall, Messi’s all-around skill, vision, and football intelligence make him greater than Ronaldo.</p> 
-    </div>
-    <div class="Messi-item">
-    <img src="https://media.newyorker.com/photos/61e87281b67066a13fd20ea8/16:9/w_2559,h_1439,c_limit/Caesar-Ronaldo.jpg" width="250px" height="auto" alt="">
-    <h3>Ronaldo</h3>
-    <p>Cristiano Ronaldo is the GOAT because of his incredible goal-scoring ability, athleticism, and success across multiple leagues. Unlike Messi, Ronaldo has proven himself in England, Spain, Italy, and now Saudi Arabia, dominating wherever he goes. He holds the record for the most goals in international football and the UEFA Champions League. Ronaldo’s physical strength, mentality, and clutch performances set him apart on the biggest stages. His work ethic, leadership, and relentless drive make him greater than Messi in the eyes of many fans.</p>
-    </div>
-</div>
-<h3>use email to vote!</h3>
-email;
-<input type="text" id="email">
-<br />
-your vote:
-<select id="vote">
-    <option value="option1">Messi</option>
-    <option value="option2">Ronaldo</option> 
-</select>
-    <br />
-
-<button onclick="submitVote();">Vote!</button>
-<br />
-<p>Messi: <span id="option1Count">8B</span> votes</p>
-<p>Ronaldo: <span id="option2Count">0</span> votes</p>
-<br />
-<br />
-<br />
-<button onclick="document.getElementById('myImage').src='https://media.cnn.com/api/v1/images/stellar/prod/221208164147-argentina-lionel-messi.jpg?c=16x9&q=h_833,w_1480,c_fill'">Messi</button>
-
-<img id="myImage" src="pic_bulboff.gif" style="width:400px" height="300px">
-
-<button onclick="document.getElementById('myImage').src='https://assets.goal.com/images/v3/blt2aaca933046f8b00/Cristiano%20Ronaldo%20Portugal%202024%20(4).jpg?auto=webp&format=pjpg&width=3840&quality=60'">Ronaldo</button>
-<br />
-<br />
+    <p>Lionel Messi is the GOAT because of his unmatched playmaking, dribbling, and ability to control the entire game. Unlike Ronaldo, who thrives on finishing, Messi creates chances, assists, and scores with equal brilliance. His World Cup win with Argentina in 2022 gave him the ultimate achievement Ronaldo has yet to earn. Messi has more Ballon d'Or awards, showing consistent recognition as the best player in the world. Overall, Messi’s all-around skill, vision, and football intelligence make him greater than Ronaldo.</p>
+<button onclick="changepic()">Change picture</button>
+<h2 id="demo"></h2>
 </body>
 </html>
