@@ -48,6 +48,7 @@ h1 {
 }
     </style>
     <script>
+        //https://www.youtube.com/watch?v=EhS-MJ5EFxc&list=PLNDGBPMUufYyjw2J39XNNZfHAAfQT8yV6&index=8
     function submitVote() {
         var email = document.getElementById("email").value;
         var vote = document.getElementById("vote").value;
@@ -107,11 +108,23 @@ email;
 your vote:
 <select id="vote">
     <option value="option1">Messi</option>
-    <option value="option2">Ronaldo</option> <br />
-<button onclick="submitVote();">Vote!</button>
-
-<p>Messi: <span id="option1Count">0</span>votes</p>
-<p>Ronaldo: <span id="option2Count">0</span>votes</p>
+    <option value="option2">Ronaldo</option> 
 </select>
+    <br />
+
+<button onclick="submitVote();">Vote!</button>
+<br />
+<p>Messi: <span id="option1Count">8B</span> votes</p>
+<p>Ronaldo: <span id="option2Count">0</span> votes</p>
+<br />
+<br />
+<br />
+<button onclick="document.getElementById('myImage').src='https://media.cnn.com/api/v1/images/stellar/prod/221208164147-argentina-lionel-messi.jpg?c=16x9&q=h_833,w_1480,c_fill'">Messi</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:400px" height="300px">
+
+<button onclick="document.getElementById('myImage').src='https://assets.goal.com/images/v3/blt2aaca933046f8b00/Cristiano%20Ronaldo%20Portugal%202024%20(4).jpg?auto=webp&format=pjpg&width=3840&quality=60'">Ronaldo</button>
+<br />
+<br />
 </body>
 </html>
